@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annu Eduford: B.Tech and M.Tech, Polytechnic, BCA, MCA and M.Sc.(IT), LLB and B.A. LLB, Others Courses.</title>
+  <!-- =============== Favicon add ================== -->
+  <link rel="shortcut icon" href="res/fav.png" type="image/x-icon">
+
+  <!-- =============== font-awesome css link ============== -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+
+  <!-- ============ css link =============== -->
+  <link rel="stylesheet" href="couses.css">
+
+  <!-- =========== Auto Write Script ============== -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+  <!--Header secsion-->
+  <nav class="navbar">
+    <div class="max-width">
+      <div class="logo"><a href="#">Annu<span>Eduford</span></a></div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <img src="res/menu.png" class="menu-btn">
+    </div>
+  </nav>
+  <!--============ Home secsion start ===============-->
+
+  <section class="home" id="home">
+    <div class="max-width">
+      <div class="home-content">
+        <div class="text-1"><span>Welcome</span> To,</div>
+        <div class="text-2">Annu Education Department</div>
+        <div class="text-3">Our Courses Offered: <span class="auto-input"></span></div>
+      </div>
+      <div class="btn">
+        <a href="#">Know More.</a>
+      </div>
+    </div>
+  </section>
+  
+  <!--================== script section ================-->
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-input", {
+      strings: ["B.Tech and M.Tech", "Polytechnic", "BCA, MCA and M.Sc.(IT)", "LLB and B.A. LLB", "Naturopathy", "Agriculture", "Yogic Sciences", "Others Courses."],
+      typeSpeed: 190,
+      backspeed: 190,
+      loop: true
+    })
+  </script>
+
+  <!-- ================== Navbar stiky function ====================== -->
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if (this.scrollY > 15) {
+          $('.navbar').addClass("sticky");
+        } else {
+          $('.navbar').removeClass("sticky");
+        }
+      })
+    })
+    $('.menu-btn').click(function () {
+      $('.navbar .menu').toggleClass("active");
+      $('.menu-btn').toggleClass("active");
+    })
+  </script>
+
+</body>
+</html>
