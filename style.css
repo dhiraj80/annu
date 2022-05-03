@@ -16,7 +16,7 @@
 
 .navbar {
     position: fixed;
-    padding: 30px 0;
+    padding: 18px 0;
     width: 100%;
     z-index: 999;
     font-family: "ubuntu", sans-serif;
@@ -24,7 +24,7 @@
 }
 
 .navbar.sticky {
-    padding: 15px 0;
+    padding: 12px 0;
     background-color: rgb(233, 37, 76);
 }
 
@@ -39,7 +39,11 @@
     font-size: 35px;
     font-weight: 600;
 }
-
+.navbar .logo i{
+    font-size: 35px ;
+    color: white;
+    padding-right: 10px;
+}
 .navbar .logo a span {
     color: rgb(233, 37, 76);
     transition: all 0.3s ease;
@@ -72,11 +76,12 @@
 
 .menu-btn {
     display: none;
-    width: 40px;
+    font-size: 33px;
     cursor: pointer;
+    color: white;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 17px;
+    right: 25px;
 }
 
 /*=============== Home Area =================*/
@@ -88,6 +93,7 @@
     height: 100vh;
     width: 100%;
     font-family: "ubuntu", sans-serif;
+    transition: all 0.5s linear;
 }
 
 .home .max-width {
@@ -143,7 +149,7 @@
     border: 4px rgb(233, 37, 76) solid;
 }
 
-.top-move{
+.top-move {
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -154,10 +160,12 @@
     height: 60px;
     cursor: pointer;
 }
-.top-move img{
+
+.top-move img {
     padding: 12px;
     filter: invert(1);
 }
+
 /* ============== about section ================*/
 section {
     overflow-x: hidden;
@@ -249,8 +257,9 @@ section {
 .about-content .right-side p {
     text-align: justify;
 }
+
 .about-content .right-side span {
-    color:rgb(255, 58, 97) ;
+    color: rgb(255, 58, 97);
     text-align: justify;
 }
 
@@ -268,10 +277,12 @@ section {
     border-radius: 6px;
     transition: all 0.5s ease;
 }
-#oth-ser{
+
+#oth-ser {
     width: 200px;
     margin-left: 20px;
 }
+
 .about-content .right-side a:hover {
     color: rgb(233, 37, 76);
     background-color: transparent;
@@ -353,7 +364,8 @@ section {
     transition: all 0.5s ease-in-out;
 }
 
-.card .box img {
+.card .box .bursh i{
+    font-size: 23px;
     transition: all 0.5s ease-in-out;
 }
 
@@ -371,6 +383,9 @@ section {
 
 .card:hover .box img {
     filter: invert(1);
+}
+.card:hover .box .bursh i {
+    color: white;
 }
 
 .card:hover #edu-btn {
@@ -397,6 +412,7 @@ section {
     height: auto;
     overflow-x: hidden;
     padding: 100px 0;
+    transition: all 0.5s ease-in-out;
 }
 
 .contact {
@@ -582,9 +598,121 @@ section {
     cursor: pointer;
 }
 
-.contact-in iframe {
+.map {
     width: 100%;
     height: 60vh;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+#del-btn{
+    display: none;
+    visibility: hidden;
+    margin-top: 10px;
+}
+/* ================= Popup ========================= */
+.popup{
+    display: none;
+    background-color: #fff;
+    width: 400px;
+    position: fixed;
+    border-radius: 16px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+}
+.popup.show {
+    top: 50%;
+    display: block;
+    transform: translate(-50%,-50%) scale(1);
+}
+.tick{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(55, 255, 0);
+    padding: 0;
+    margin-left: 37%;
+    margin-top: -50px;
+}
+.popup .tick i{
+    color: #fff;
+    margin: 17px;
+    font-size: 65px;
+}
+.popup h2{
+    margin-top: 15px;
+    font-size: 35px;
+    font-weight: normal;
+}
+.popup p{
+    margin: 15px;
+    font-size: 15px;
+}
+.popup button{
+    width: 80%;
+    margin: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(55, 255, 0);
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.popup button:hover{
+    background-color: rgb(0, 241, 36);
+}
+/* ===================== footer style ==================== */
+footer {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(7, 6, 6);
+}
+
+footer .social-media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+footer .social-media li {
+    list-style: none;
+}
+
+footer .social-media li a {
+    color: white;
+    font-size: 2em;
+    margin: 20px 20px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social-media li a:hover {
+    transform: translateY(-7px);
+}
+
+.copywrite {
+    color: white;
+    font-family: "poppins", sans-serif;
+    font-weight: 300;
+}
+
+.copywrite span {
+    color: rgb(233, 37, 76);
+}
+
+.copywrite a {
+    text-decoration: none;
+    color: rgb(233, 37, 76);
 }
 
 /*============== media quariy =================*/
@@ -620,7 +748,7 @@ section {
 
 }
 
-@media (max-width: 880px) {
+@media (max-width: 920px) {
     .max-width {
         padding: 0 25px;
     }
@@ -634,7 +762,7 @@ section {
         font-size: 65px;
         word-wrap: normal;
         padding-right: 20px;
-    
+
     }
 
     .home .home-content .text-3 {
@@ -670,7 +798,7 @@ section {
     }
 
     .menu-btn {
-        top: 18px;
+        top: 17px;
         display: block;
         z-index: 999;
     }
@@ -711,110 +839,200 @@ section {
     .skills .right {
         width: 100%;
     }
+
+    footer .social-media li a {
+        font-size: 3ex;
+    }
+
+    .copywrite {
+        font-size: 15px;
+    }
 }
 
 
 @media (max-width: 1164px) {
-    #oth-ser{
+    #oth-ser {
         margin-left: 0;
     }
 }
+
 @media (max-width: 593px) {
-    #oth-ser{
+    #oth-ser {
         margin-left: 20px;
     }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
 }
+
 @media (max-width: 430px) {
     .contact-in {
         padding: 20px;
     }
-    .top-move{
+
+    .top-move {
         width: 45px;
         height: 45px;
     }
-    .top-move img{
+
+    .top-move img {
+        z-index: 999;
         padding-left: 7px;
         padding-top: 7px;
         width: 30px;
         height: auto;
     }
 }
+
 @media (max-width: 453px) {
-    .max-width{
+    .max-width {
         width: 85vw;
         align-items: center;
         padding: 0;
-    }   
-    .home .max-width{
+    }
+
+    .home .max-width {
         padding-right: 10px;
     }
-@media (max-width: 380px) {
-    .Services h2 {
-        padding: 30px;
+    .navbar .logo i{
+        font-size: 25px
+    }
+    .navbar .logo a{
+        font-size: 25px
+    }
+    .menu-btn {
+        font-size: 27px;
+        top: 13px;
+        
+    }
+    @media (max-width: 380px) {
+        .home .home-content .text-1 {
+            font-size: 18px;
+        }
+        .home .home-content .text-2 {
+            font-size: 50px;
+        }
+        .home .home-content .text-3 {
+            font-size: 17px;
+        }
+        .btn{
+            width: 180px;
+            height: 30px;
+            padding: 6px;
+        }
+        .btn a{
+            font-size: 22px;
+        }
+        .Services h2 {
+            padding: 30px;
+        }
+        .card .box .text {
+            font-size: 25px;
+        }
+        .card p{
+            font-size: 15px;
+        }
+        #v-btn{
+            font-size: 15px;
+            width: 100px;
+        }
+        #oth-ser {
+            font-size: 15px;
+            width: 130px;
+            margin: 0;
+        }
+        .Services h2::after {
+            padding: 4px;
+        }
+
+        .about-content .left-side img {
+            width: 200px;
+            height: 200px;
+        }
+
+        footer .social-media li a {
+            font-size: 2ex;
+        }
+
+        .copywrite {
+            font-size: 10px;
+        }
     }
 
-    .Services h2::after {
-        padding: 4px;
+    @media (max-width: 344px) {
+        .Services h2 {
+            padding: 30px;
+        }
+
+        .Services h2::before {
+            margin: 2px;
+        }
+
+        .Services h2::after {
+            padding: 2px;
+        }
+
+        .about-content .left-side img {
+            width: 250px;
+            height: 250px;
+        }
     }
 
-    .about-content .left-side img {
-        width: 200px;
-        height: 200px;
-    }
-    
-@media (max-width: 344px) {
-    .Services h2 {
-        padding: 30px;
+    @media (max-width:480px) {
+
+        .contact-in h1 {
+            font-size: 25px;
+        }
+
+        .contact-in p {
+            font-size: 15px;
+        }
+
+        .contact-in:nth-child(1) {
+            flex: 50%;
+        }
+
+        .contact-in:nth-child(2) {
+            flex: 50%;
+        }
+
+        .contact-in:nth-child(3) {
+            flex: 50%;
+        }
+
+        footer .social-media li a {
+            font-size: 8px;
+        }
+
+        .copywrite {
+            font-size: 7px;
+        }
+
     }
 
-    .Services h2::before {
-        margin: 2px;
-    }
+    @media (max-width:450px) {
+        footer .social-media li a {
+            font-size: 13px;
+            margin: 10px 20px;
+        }
 
-    .Services h2::after {
-        padding: 2px;
-    }
+        .copywrite {
+            font-size: 10px;
+        }
 
-    .about-content .left-side img {
-        width: 250px;
-        height: 250px;
+    }
+    @media (max-width:560px){
+        .popup{
+            margin: auto;
+            width: 222px;
+            position: absolute;
+        }
+        .popup .tick{
+            width: 100px;
+            height: 100px;
+            margin-left: 30%;
+        }       
     }
 }
-
-@media (max-width:480px) {
-    .contact-in h1 {
-        font-size: 25px;
-    }
-
-    .contact-in p {
-        font-size: 15px;
-    }
-
-    .contact-in:nth-child(1) {
-        flex: 50%;
-    }
-
-    .contact-in:nth-child(2) {
-        flex: 50%;
-    }
-
-    .contact-in:nth-child(3) {
-        flex: 100%;
-    }
-}
-
-@media (max-width:600px) {
-   
-    .contact-in:nth-child(1) {
-        flex: 50%;
-    }
-
-    .contact-in:nth-child(2) {
-        flex: 50%;
-    }
-
-    .contact-in:nth-child(3) {
-        flex: 100%;
-    }
-
-}}}
